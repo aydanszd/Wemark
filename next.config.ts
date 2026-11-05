@@ -7,6 +7,15 @@ const nextConfig: NextConfig = {
   },
   cacheComponents: true,
   partialPrefetching: true,
+  images: {
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "admin.wemark.pro",
+        pathname: "/media/**",
+      },
+    ],
+  },
   turbopack: {
     rules: {
       "*.css": {
